@@ -46,7 +46,7 @@ int main(void)
 	else
 		printf("타겟 저장 인덱스: %d \n", idx);
 
-	idx = BSearch(arr3, sizeof(arr3) / sizeof(int));
+	idx = BSearch(arr3, sizeof(arr3) / sizeof(int), 3);
 	if (idx == -1)
 		printf("탐색 실패 \n");
 	else
