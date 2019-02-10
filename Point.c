@@ -12,7 +12,7 @@ void ShowPointPos(Point* ppos)
 	printf("[%d, %d] \n", ppos->xpos, ppos->ypos);
 }
 
-void PointComp(Point* pos1, Point* pos2)
+int PointComp(Point* pos1, Point* pos2)
 {
 	if (pos1->xpos == pos2->xpos&&pos1->ypos == pos2->ypos)
 		return 0;
