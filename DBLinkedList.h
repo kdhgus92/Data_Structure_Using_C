@@ -23,7 +23,7 @@ typedef struct _DLinkedList
 typedef DBLinkedList List;
 
 void ListInit(List* plist);
-void LInsert(List* plist);
+void LInsert(List* plist, Data data);
 
 int LFirst(List* plist, Data* pdata);
 int LNext(List* plist, Data* pdata);
