@@ -19,34 +19,53 @@ void SPush(Stack * pstack, Data data)
 {
 	Node * newNode = (Node*)malloc(sizeof(Node));
 	newNode->data = data;
+	newNode->next = pstack->head;
 
-	if (pstack->head == NULL)
-	{
-		newNode->next = NULL;
-		pstack->head = newNode;
-	}
-	else
-	{
-		newNode->next = pstack->head;
-		pstack->head = newNode;
-	}
+	pstack->head = newNode;
 
-	(pstack->numOfData)++;
+	//if (pstack->head == NULL)
+	//{
+	//	newNode->next = NULL;
+	//	pstack->head = newNode;
+	//}
+	//else
+	//{
+	//	newNode->next = pstack->head;
+	//	pstack->head = newNode;
+	//}
+
+	//(pstack->numOfData)++;
 }
 
 Data SPop(Stack * pstack)
 {
-	Node* rnod = pstack->head;
-	Data data = pstack->head->data;
+	Data rdata;
+	Node* rnode;
 	
+	if (SIsEmpty(pstack))
+	{
+		printf("Stack Memory Error!");
+		exit(-1);
+	}
+
+	rnode = pstack->head;
+	rdata = pstack->head->data;
+
 	pstack->head = pstack->head->next;
-	
-	free(rnod);
-	return data;
+	free(rnode);
+
+	return rdata;
 }
 
 Data SPeek(Stack * pstack)
 {
-	Data data = pstack->head->data;
-	return data;
+	//Data data = pstack->head->data;
+
+	if (SIsEmpty(pstack))
+	{
+		printf("Stack Memory Error!");
+		exit(-1);
+	}
+
+	return pstack->head->data;
 }
