@@ -4,9 +4,9 @@
 
 void StackInit(Stack * pstack)
 {
-	int i;
-	for (i = 0; i < STACK_LEN; i++)
-		pstack->stackArr[i] = 0;
+	//int i;
+	//for (i = 0; i < stack_len; i++)
+	//	pstack->stackarr[i] = 0;
 	pstack->topIndex = -1;
 }
 
@@ -26,14 +26,30 @@ void SPush(Stack * pstack, Data data)
 
 Data SPop(Stack * pstack)
 {
+	int rIdx;
+
+	if (SIsEmpty(pstack))
+	{
+		printf("Stack Memory Error!");
+		exit(-1);
+	}
+
+	rIdx = pstack->topIndex;
 	Data data = pstack->stackArr[pstack->topIndex];
-	pstack->stackArr[pstack->topIndex] = 0;
+	//pstack->stackarr[pstack->topindex] = 0;
 	(pstack->topIndex)--;
-	return data;
+	//return data;
+	return pstack->stackArr[rIdx];
 }
 
 Data SPeek(Stack * pstack)
 {
+	if (SIsEmpty(pstack))
+	{
+		printf("Stack Memory Error!");
+		exit(-1);
+	}
+
 	Data data = pstack->stackArr[pstack->topIndex];
 	return data;
 }
