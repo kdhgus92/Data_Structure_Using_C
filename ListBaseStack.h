@@ -8,19 +8,19 @@ typedef int Data;
 
 typedef struct _node
 {
-  Data data;
-  struct _node * next;
+	Data data;
+	struct _node * next;
 } Node;
 
 typedef struct _listBaseStack
 {
-  Node * head;
-  Node * cur;
-  Node * before;
-  int numOfData;
-} ListBaseStack;
+	Node * head;
+	//Node * cur;
+	//Node * before;
+	//int numOfData;
+} ListStack;
 
-typedef ListBaseStack Stack;
+typedef ListStack Stack;
 
 void StackInit(Stack * pstack);
 int SIsEmpty(Stack * pstack);
