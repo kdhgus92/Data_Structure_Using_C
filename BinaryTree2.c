@@ -74,7 +74,7 @@ void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action)
 
 //8-1연습문제 추가 부분
 
-void DeleteBTree(BTreeNode * bt)
+void DeleteTree(BTreeNode * bt)
 {
 	if (bt == NULL)
 		return;
