@@ -71,3 +71,16 @@ void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action)
 	PostorderTraverse(bt->right, action);
 	action(bt->data);
 }
+
+//8-1연습문제 추가 부분
+
+void DeleteBTree(BTreeNode * bt)
+{
+	if (bt == NULL)
+		return;
+	DeleteBTree(bt->left);
+	DeleteBTree(bt->right);
+
+	//printf("del tree data: %d \n", bt->data);
+	free(bt);
+}
