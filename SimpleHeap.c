@@ -33,7 +33,7 @@ int GetHiPriChildIDX(Heap * ph, int idx)
 	if (GetLChildIDX(idx) > ph->numOfData)
 		return 0;
 	else if (GetLChildIDX(idx) == ph->numOfData)
-		return GetLChildIDX;
+		return GetLChildIDX(idx);
 	else
 	{
 		if (ph->heapArr[GetLChildIDX(idx)].pr > ph->heapArr[GetRChildIDX(idx)].pr)
