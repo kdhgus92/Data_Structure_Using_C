@@ -18,6 +18,30 @@ int MedianOfThree(int arr[], int left, int right)
 	if (arr[samples[0]] > arr[samples[1]])
 		Swap(samples, 0, 1);
 	return samples[1];
+	
+	/*
+	
+	int mid = (left + right) / 2;
+	if (arr[left] > arr[mid])
+	{
+		if (arr[mid] > arr[right])
+			return mid;
+		else if (arr[left] > arr[right])
+			return right;
+		else
+			return left;
+	}
+	else
+	{
+		if (arr[left] > arr[right])
+			return left;
+		else if (arr[mid] > arr[right])
+			return right;
+		else
+			return mid;
+	}
+	
+	*/
 }
 
 int Partition(int arr[], int left, int right)
