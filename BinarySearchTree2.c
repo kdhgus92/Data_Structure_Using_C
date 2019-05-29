@@ -93,7 +93,7 @@ BTreeNode * BSTRemove(BTreeNode ** pRoot, BSTData target)
 	dNode = cNode;
 
 	//case1 : 단말노드
-	if (GetLeftSubTree(dNode) == NULL && GetRightSubTree(dNode))
+	if (GetLeftSubTree(dNode) == NULL && GetRightSubTree(dNode)==NULL)
 	{
 		if (GetLeftSubTree(pNode) == dNode)
 			RemoveLeftSubTree(pNode);
@@ -139,7 +139,7 @@ BTreeNode * BSTRemove(BTreeNode ** pRoot, BSTData target)
 			ChangeRightSubTree(mpNode, GetRightSubTree(mNode));
 
 		dNode = mNode;
-		SetData(dNode, delData);		
+		SetData(dNode, delData);
 	}
 
 	if (GetRightSubTree(pVRoot) != *pRoot)
