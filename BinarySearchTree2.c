@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "BinaryTree3.h"
 #include "BinarySearchTree2.h"
 
@@ -87,13 +88,13 @@ BTreeNode * BSTRemove(BTreeNode ** pRoot, BSTData target)
 			cNode = GetRightSubTree(cNode);
 	}
 
-	if (cNode = NULL)
+	if (cNode == NULL)
 		return NULL;
 
 	dNode = cNode;
 
 	//case1 : 단말노드
-	if (GetLeftSubTree(dNode) == NULL && GetRightSubTree(dNode)==NULL)
+	if (GetLeftSubTree(dNode) == NULL && GetRightSubTree(dNode) == NULL)
 	{
 		if (GetLeftSubTree(pNode) == dNode)
 			RemoveLeftSubTree(pNode);
