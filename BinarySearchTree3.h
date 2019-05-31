@@ -17,6 +17,7 @@ BTreeNode * BSTRemove(BTreeNode ** pRoot, BSTData target);
 
 void BSTShowAll(BTreeNode * bst);
 
-BTreeNode * BSTRemove2(BTreeNode ** pRoot, BSTData target);
+BTreeNode * BSTInsert2(BTreeNode ** pRoot, BSTData data);
+BTreeNode * BSTRemove2(BTreeNode ** pRoot, BSTData target); //내가 만든것.
 
 #endif
