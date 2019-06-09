@@ -1,10 +1,13 @@
 #ifndef __D_LINKED_LIST_H__
 #define __D_LINKED_LIST_H__
 
+//#include "Slot2.h"
+
 #define TRUE 1
 #define FALSE 0
 
 typedef int LData;
+//typedef slot LData;
 
 typedef struct _node
 {
